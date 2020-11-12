@@ -4,7 +4,7 @@ Text Sentiment Analysis in Python using Natural Language Processing (NLP) for Ne
 ## Web Application Demo
 [View the deployed WebApp on Heroku](https://some-app.herokuapp.com/).
 
-## Setting up
+## Installation : Setting up the Application Locally
 * Dependencies:
   * Run the command <code>pip install -r requirements.txt</code> on your cmd/python terminal.
   * It is highly recommended to create a new [Virtual Environment](https://docs.python.org/3/library/venv.html) first before running the above commands.
