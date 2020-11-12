@@ -1,0 +1,9 @@
+# Byte-compiled / optimized / DLL files / python cached files
+__pycache__/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
