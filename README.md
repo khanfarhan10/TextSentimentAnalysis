@@ -7,7 +7,8 @@ Text Sentiment Analysis in Python using Natural Language Processing (NLP) for Ne
 ## Installation : Setting up the Application Locally
 * Dependencies:
   * Run the command <code>pip install -r requirements.txt</code> on your cmd/python terminal.
-  * It is highly recommended to create a new [Virtual Environment](https://docs.python.org/3/library/venv.html) first before running the above commands. The instructions for doing the same is [provided below](/#Creating Virtual Environments for Python Development in Visual Studio Code for this Project).
+  * It is highly recommended to create a new [Virtual Environment](https://docs.python.org/3/library/venv.html) first before running the above commands. The instructions for doing the same is [provided below](/#creating-virtual-environments-for-python-development-in-visual-studio-code-for-this-project).
+<!-- https://github.com/khanfarhan10/TextSentimentAnalysis#creating-virtual-environments-for-python-development-in-visual-studio-code-for-this-project -->
 * Deployment:
   * Use Streamlit App : <code>streamlit run app.py</code>
 *  If there is no popup window opening in the browser you can paste the following address : [http://localhost:8501/](http://localhost:8501).
