@@ -56,19 +56,19 @@ pip 20.0.2 from C:\ProgramData\Anaconda3\lib\site-packages\pip (python 3.7)</cod
 
 **Create a project environment directory with YourAwesomeProjectNameEnvironment :**
 
-<code>C:\Users\farha\Documents\GitHub\TextSentimentAnalysis>mkdir TextGenEnv</code>
+<code>C:\Users\farha\Documents\GitHub\TextSentimentAnalysis>mkdir TextSentimentEnv</code>
 
 **Create a new (empty) virtual environment in YourAwesomeProjectNameEnvironment :**
 
-<code>C:\Users\farha\Documents\GitHub\TextSentimentAnalysis>virtualenv TextGenEnv</code>
+<code>C:\Users\farha\Documents\GitHub\TextSentimentAnalysis>virtualenv TextSentimentEnv</code>
 
 ###### Note : If you have problems with this step, try followng the debugging options [provided below](#useful-links-for-debugging).
 
 **Enter into the newly created (empty) virtual environment in YourAwesomeProjectNameEnvironment :**
-<code>C:\Users\farha\Documents\GitHub\TextSentimentAnalysis>TextGenEnv\Scripts\activate</code>
+<code>C:\Users\farha\Documents\GitHub\TextSentimentAnalysis>TextSentimentEnv\Scripts\activate</code>
 
 You will notice a (YourAwesomeProjectNameEnvironment) appearing in the Command Line Interface :
-<code>(TextGenEnv) C:\Users\farha\Documents\GitHub\TextSentimentAnalysis></code>
+<code>(TextSentimentEnv) C:\Users\farha\Documents\GitHub\TextSentimentAnalysis></code>
 
 Wohoooo! You're now in your virtual environment.
 
@@ -78,8 +78,11 @@ Okay Great! We've got our virtualenv setup, but it's empty right now. Lets insta
 For this we will be needing a .txt file noting all the dependency requirements for a project under the project directory.
 
 This file contains packages in the following naming fashion and can be obtained using 
+
 <code>pip freeze > requirements.txt</code>
+
 or using 
+
 <code>conda list --explicit > reqs.txt</code>
 
 When you've obtained the requirements file, do the following with your Environment Activated :
