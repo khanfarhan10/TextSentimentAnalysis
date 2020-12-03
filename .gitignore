@@ -18,4 +18,4 @@ TextSentimentEnv
 # Ignore Heroku files
 setup.sh
 Procfile
-heroku_run.py
+heroku_create.py
