@@ -1,6 +1,8 @@
 # Text Sentiment Analysis
 Text Sentiment Analysis in Python using Natural Language Processing (NLP) for Negative/Positive Content Predictions. Deployed on the Cloud using Streamlit on the Heroku Platform.
 
+**Winter of Code 2020 :** [View Project Ideas](https://github.com/dsc-iem/WoC-Project-Ideas#text-sentiment-analysis) or [View Issues to Solve](https://github.com/khanfarhan10/TextSentimentAnalysis/issues).
+
 ## Web Application Demo
 [View the deployed WebApp on Heroku](https://some-app.herokuapp.com/).
 
@@ -9,7 +11,7 @@ Text Sentiment Analysis in Python using Natural Language Processing (NLP) for Ne
   * Run the command <code>pip install -r requirements.txt</code> on your cmd/python terminal.
   * It is highly recommended to create a new [Virtual Environment](https://docs.python.org/3/library/venv.html) first before running the above commands. The instructions for doing the same is [provided below](#creating-virtual-environments-for-python-development-in-visual-studio-code-for-this-project).
 * Deployment:
-  * Use Streamlit App : <code>streamlit run app.py</code>
+  * Use Streamlit App : <code>streamlit run TextSentimentApp.py</code>
 *  If there is no popup window opening in the browser you can paste the following address : [http://localhost:8501/](http://localhost:8501).
   
 # Creating Virtual Environments for Python Development in Visual Studio Code for this Project
@@ -89,7 +91,7 @@ When you've obtained the requirements file, do the following with your Environme
 <code>pip install -r requirements.txt</code>
 
 You are now happy to go forth coding and running your app with :
-<code>streamlit run TextGenApp.py</code>
+<code>streamlit run TextSentimentApp.py</code>
 
 ### Useful Links for Debugging :
 

@@ -10,3 +10,12 @@ ipython_config.py
 
 # VirtualEnv Folders
 .venv
+TextSentimentEnv
+
+# Temporary Files and Folders
+.temp
+
+# Ignore Heroku files
+setup.sh
+Procfile
+heroku_run.py
