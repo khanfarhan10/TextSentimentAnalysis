@@ -8,7 +8,6 @@ Text Sentiment Analysis in Python using Natural Language Processing (NLP) for Ne
 * Dependencies:
   * Run the command <code>pip install -r requirements.txt</code> on your cmd/python terminal.
   * It is highly recommended to create a new [Virtual Environment](https://docs.python.org/3/library/venv.html) first before running the above commands. The instructions for doing the same is [provided below](#creating-virtual-environments-for-python-development-in-visual-studio-code-for-this-project).
-<!-- https://github.com/khanfarhan10/TextSentimentAnalysis#creating-virtual-environments-for-python-development-in-visual-studio-code-for-this-project -->
 * Deployment:
   * Use Streamlit App : <code>streamlit run app.py</code>
 *  If there is no popup window opening in the browser you can paste the following address : [http://localhost:8501/](http://localhost:8501).
@@ -18,7 +17,7 @@ Text Sentiment Analysis in Python using Natural Language Processing (NLP) for Ne
 A Guide to Creating Virtual Environments into Python and Using them Effectively.
 
 ## Clone the Text Sentiment Analysis Repo :
-Head over to [our github repository](https://github.com/khanfarhan10/TextGeneration) ,fork the repo to your github account & clone the repository into your local machine.
+Head over to [our github repository](https://github.com/khanfarhan10/TextSentimentAnalysis) ,fork the repo to your github account & clone the repository into your local machine.
 
 ## Initial Setup
 
@@ -27,42 +26,49 @@ Head over to [our github repository](https://github.com/khanfarhan10/TextGenerat
 It should display an output like the following :
 
 **CMD**
+
 <code>Microsoft Windows [Version 10.0.18363.1198]
 (c) 2019 Microsoft Corporation. All rights reserved.
-C:\Users\farha\Documents\GitHub\TextGeneration></code>
+C:\Users\farha\Documents\GitHub\TextSentimentAnalysis></code>
 
 or
 
 **Powershell**
+
 <code>
 Windows PowerShell
 Copyright (C) Microsoft Corporation. All rights reserved.
 Try the new cross-platform PowerShell https://aka.ms/pscore6</code>
 
 **Check for the python version you're running :**
-<code>C:\Users\farha\Documents\GitHub\TextGeneration>python --version
+
+<code>C:\Users\farha\Documents\GitHub\TextSentimentAnalysis>python --version
 Python 3.7.6</code>
 
 **Check for the Python Packaging Index (Pypi) version you're running :**
-<code>C:\Users\farha\Documents\GitHub\TextGeneration>pip --version
+
+<code>C:\Users\farha\Documents\GitHub\TextSentimentAnalysis>pip --version
 pip 20.0.2 from C:\ProgramData\Anaconda3\lib\site-packages\pip (python 3.7)</code>
 
 **Install the virtualenv module from pip :**
-<code>C:\Users\farha\Documents\GitHub\TextGeneration>pip install virtualenv</code>
+
+<code>C:\Users\farha\Documents\GitHub\TextSentimentAnalysis>pip install virtualenv</code>
 
 **Create a project environment directory with YourAwesomeProjectNameEnvironment :**
-<code>C:\Users\farha\Documents\GitHub\TextGeneration>mkdir TextGenEnv</code>
+
+<code>C:\Users\farha\Documents\GitHub\TextSentimentAnalysis>mkdir TextGenEnv</code>
 
 **Create a new (empty) virtual environment in YourAwesomeProjectNameEnvironment :**
-<code>C:\Users\farha\Documents\GitHub\TextGeneration>virtualenv TextGenEnv</code>
 
-###### Note : If you have problems with this step, try followng the debugging options provided below.
+<code>C:\Users\farha\Documents\GitHub\TextSentimentAnalysis>virtualenv TextGenEnv</code>
+
+###### Note : If you have problems with this step, try followng the debugging options [provided below](#useful-links-for-debugging).
 
 **Enter into the newly created (empty) virtual environment in YourAwesomeProjectNameEnvironment :**
-<code>C:\Users\farha\Documents\GitHub\TextGeneration>TextGenEnv\Scripts\activate</code>
+<code>C:\Users\farha\Documents\GitHub\TextSentimentAnalysis>TextGenEnv\Scripts\activate</code>
 
 You will notice a (YourAwesomeProjectNameEnvironment) appearing in the Command Line Interface :
-<code>(TextGenEnv) C:\Users\farha\Documents\GitHub\TextGeneration></code>
+<code>(TextGenEnv) C:\Users\farha\Documents\GitHub\TextSentimentAnalysis></code>
 
 Wohoooo! You're now in your virtual environment.
 
@@ -89,3 +95,7 @@ You are now happy to go forth coding and running your app with :
 - https://dev.to/idrisrampurawala/flask-boilerplate-structuring-flask-app-3kcd
 
 # Voila Magic!
+
+If you have further issues/queries regarding the project, feel free to contact us : 
+- Farhan Hai Khan : njrfarhandasilva10@gmail.com
+- Tannistha Pal : paltannistha@gmail.com

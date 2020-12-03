@@ -1,21 +1,8 @@
 # keras tools
 Keras==2.4.3
-Keras-Preprocessing==1.1.2
-keras-vis==0.4.1
 
 # tensorflow 2.x and extensions
-tensorboard==2.3.0
-tensorboard-plugin-wit==1.7.0
-tensorboardcolab==0.0.22
 tensorflow==2.3.0
-tensorflow-addons==0.8.3
-tensorflow-datasets==4.0.1
-tensorflow-estimator==2.3.0
-tensorflow-gcs-config==2.3.0
-tensorflow-hub==0.10.0
-tensorflow-metadata==0.24.0
-tensorflow-privacy==0.2.2
-tensorflow-probability==0.11.0
 
 # get TextBlob and dependencies
 textblob==0.15.3
