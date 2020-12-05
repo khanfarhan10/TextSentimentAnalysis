@@ -2,6 +2,7 @@
 ![Python Version](https://img.shields.io/badge/Python-3.7.6-red)
 ![Tensorflow Version](https://img.shields.io/badge/tensorflow-2.3.0-lime)
 ![Keras Version](https://img.shields.io/badge/keras-2.4.3-orange)
+![Pypi Version](https://img.shields.io/badge/pypi-20.0.2-yellow)
 
 ![GitHub Issues Open](https://img.shields.io/github/issues-raw/khanfarhan10/TextSentimentAnalysis)
 ![GitHub Issues Closed](https://img.shields.io/github/issues-closed-raw/khanfarhan10/TextSentimentAnalysis)
@@ -81,6 +82,10 @@ pip 20.0.2 from C:\ProgramData\Anaconda3\lib\site-packages\pip (python 3.7)</cod
 **Create a new (empty) virtual environment in YourAwesomeProjectNameEnvironment :**
 
 <code>C:\Users\farha\Documents\GitHub\TextSentimentAnalysis>virtualenv TextSentimentEnv</code>
+
+Users for other python versions  may [Install Python 3.7.6](https://www.python.org/downloads/release/python-376/) first and then run the following command to choose the correct python interpreter with the correct path : 
+
+<code>virtualenv --python=python3.7.6 TextSentimentEnv</code>
 
 ###### Note : If you have problems with this step, try followng the debugging options [provided below](#useful-links-for-debugging).
 
