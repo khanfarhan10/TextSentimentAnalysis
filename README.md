@@ -3,6 +3,7 @@
 ![Tensorflow Version](https://img.shields.io/badge/tensorflow-2.3.0-lime)
 ![Keras Version](https://img.shields.io/badge/keras-2.4.3-orange)
 ![Pypi Version](https://img.shields.io/badge/pypi-20.0.2-yellow)
+![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Fkhanfarhan10%2FTextSentimentAnalysis)
 
 ![GitHub Issues Open](https://img.shields.io/github/issues-raw/khanfarhan10/TextSentimentAnalysis)
 ![GitHub Issues Closed](https://img.shields.io/github/issues-closed-raw/khanfarhan10/TextSentimentAnalysis)
