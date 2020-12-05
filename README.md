@@ -1,4 +1,22 @@
 # Text Sentiment Analysis
+![Python Version](https://img.shields.io/badge/Python-3.7.6-red)
+![Tensorflow Version](https://img.shields.io/badge/tensorflow-2.3.0-lime)
+![Keras Version](https://img.shields.io/badge/keras-2.4.3-orange)
+
+![GitHub Issues Open](https://img.shields.io/github/issues-raw/khanfarhan10/TextSentimentAnalysis)
+![GitHub Issues Closed](https://img.shields.io/github/issues-closed-raw/khanfarhan10/TextSentimentAnalysis)
+![GitHub Open Pull Requests](https://img.shields.io/github/issues-pr-raw/khanfarhan10/TextSentimentAnalysis)
+![GitHub Closed Pull Requests](https://img.shields.io/github/issues-pr-closed-raw/khanfarhan10/TextSentimentAnalysis)
+![GitHub Forks](https://img.shields.io/github/forks/khanfarhan10/TextSentimentAnalysis)
+![GitHub Stars](https://img.shields.io/github/stars/khanfarhan10/TextSentimentAnalysis)
+![GitHub License](https://img.shields.io/github/license/khanfarhan10/TextSentimentAnalysis)
+![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fkhanfarhan10%2FTextSentimentAnalysis
+)
+
+<!--
+![]()
+Shoutout to https://shields.io/ for these wonderful badges.
+-->
 Text Sentiment Analysis in Python using Natural Language Processing (NLP) for Negative/Positive Content Predictions. Deployed on the Cloud using Streamlit on the Heroku Platform.
 
 **Winter of Code 2020 :** [View Project Ideas](https://github.com/dsc-iem/WoC-Project-Ideas#text-sentiment-analysis) or [View Issues to Solve](https://github.com/khanfarhan10/TextSentimentAnalysis/issues).
