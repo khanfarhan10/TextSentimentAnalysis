@@ -12,8 +12,6 @@
 ![GitHub Forks](https://img.shields.io/github/forks/khanfarhan10/TextSentimentAnalysis)
 ![GitHub Stars](https://img.shields.io/github/stars/khanfarhan10/TextSentimentAnalysis)
 ![GitHub License](https://img.shields.io/github/license/khanfarhan10/TextSentimentAnalysis)
-![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fkhanfarhan10%2FTextSentimentAnalysis
-)
 
 <!--
 ![]()
