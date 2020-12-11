@@ -7,3 +7,15 @@ __pycache__/
 # IPython
 profile_default/
 ipython_config.py
+
+# VirtualEnv Folders
+.venv
+TextSentimentEnv
+
+# Temporary Files and Folders
+.temp
+
+# Ignore Heroku files
+setup.sh
+Procfile
+heroku_create.py
