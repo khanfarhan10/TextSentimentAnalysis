@@ -6,7 +6,7 @@
 # Winter of Code Final Work Product
 * **Name:** YOUR_NAME
 * **Organisation:** DSC-IEM
-* **Project:** [TextSentimentAnalysis]([github-link](https://github.com/khanfarhan10/TextSentimentAnalysis))
+* **Project:** [TextSentimentAnalysis](https://github.com/khanfarhan10/TextSentimentAnalysis)
 
 ## Proposed Objectives
 * Idea1
