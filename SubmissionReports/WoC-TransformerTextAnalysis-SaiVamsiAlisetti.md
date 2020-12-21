@@ -33,24 +33,26 @@
 
   Integrated streamlit with flask using the requests library of python transforming streamlit as a frontend framework and flask web api as a backend microservice.
 
-
   *Pull Requests:*
   * **Streamlit to flask connection #16:** https://github.com/khanfarhan10/TextSentimentAnalysis/pull/16
 
-* ### Dataset selection and training transformer model
+* ### Research on dataset and model selection
+    
+  For the dataset my primary selections were Standford Sentiment Treebank or the IMDB Dataset. But upon the suggestion from my peers and further research, I have chosen the amazon food reviews dataset since it has a good amount of variance and its a huge dataset.
+  Since the training model was told to be lightweight I chose the distilbert transformer model leveraging the huggingface transformer library.  
+
+* ### Training transformer model
   
-  Trained distilbert model on the amazon food reviews dataset.
+  Training was done in pytorch, and the relevant hyperparameters are included in the training script. For more details please look into the training script.
   
   Training Script: https://colab.research.google.com/drive/1ejVSWQng9chJRoqWprfxTnZnsKAcRFT-?usp=sharing
 
-## Objectives in Progress
-* ### Model Training
 
-  Training distilbert transformer model on amazon food review dataset.
+## Objectives in Progress
 
 * ### Key Word Extraction
 
-  Working on key word extraction and displaying the data visually.
+  Currently, trying to understand the spacy library to use it efficiently for keyword extraction.
 
 
 ## Other Objectives
