@@ -1,0 +1,14 @@
+flask<=1.1.1
+gunicorn==19.9.0
+matplotlib>=1.4.3
+pandas>=0.19
+itsdangerous==1.1.0
+Jinja2==2.10.1
+MarkupSafe==1.1.1
+Werkzeug==1.0.1
+matplotlib>=1.4.3
+tqdm==4.19.6
+bs4==0.0.1
+lxml==3.4.2
+scikit-learn==0.23.1
+nltk==3.4.5

@@ -1,0 +1,40 @@
+if request.method == 'POST':
+        message = request.form['message']
+        if len(message)>=1:
+            data = [message]
+            vect = cv.transform(data).toarray()
+            my_prediction = clf.predict(vect)
+        else:
+            my_prediction="Please enter you message"
+	return render_template('home.html',prediction = my_prediction)
+
+
+
+##Naive bayes
+
+from sklearn.naive_bayes import MultinomialNB
+nb_params={'alpha':[10**i for i in range(-5,5)]}
+nb=MultinomialNB()
+rndm_clf=RandomizedSearchCV(nb,nb_params)
+rndm_clf.fit(reviews_train_bow,sentiment_train)
+rndm_clf.best_params_
+
+nb_model=MultinomialNB(alpha=0.001)
+nb_model.fit(reviews_train_bow,sentiment_train)
+train_fpr,train_tpr,threshold=roc_curve(sentiment_train,nb_model.predict_proba(reviews_train_bow)[:,1])
+test_fpr,test_tpr,threshold=roc_curve(sentiment_test,nb_model.predict_proba(reviews_test_bow)[:,1])
+plt.plot(train_fpr,train_tpr,label='Train Auc = '+str(auc(train_fpr,train_tpr)))
+plt.plot(test_fpr,test_tpr,label='Test AUC = '+str(auc(test_fpr,test_tpr)))
+plt.legend()
+
+pickle.dump(nb_model,open('nb_model.pkl','wb'))
+
+
+background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top,  rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg,  #670d10 0%, #092756 100%);
+	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+	background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -o-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -o-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+	background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), linear-gradient(to bottom,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), linear-gradient(135deg,  #670d10 0%,#092756 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
+
+<!--background: #000000;
