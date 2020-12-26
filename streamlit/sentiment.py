@@ -20,6 +20,7 @@ def main():
     if st.button("Analyze"):
         with st.spinner('Analyze Text'):
             output = forward(user_input)
+            st.write(output)
             print(output)
 
 
