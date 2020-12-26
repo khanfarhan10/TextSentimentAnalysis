@@ -1,11 +1,21 @@
 from flask import Flask, request
 from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassification
 import torch
+import numpy as np
 
 app = Flask(__name__)
 
 tokenizer = DistilBertTokenizerFast.from_pretrained("distilbert-base-cased");
-model = DistilBertForSequenceClassification.from_pretrained("/models/amazon-distilbert", local_files_only=False)
+model = DistilBertForSequenceClassification.from_pretrained("../models/amazon-distilbert")
+
+label_dict = {
+    0: "Sad Af",
+    1: "Sad",
+    2: "Meh",
+    3: "Happy",
+    4: "Happy af"
+}
+
 
 @app.route("/run_forward", methods=["POST"])
 def forward():
@@ -19,9 +29,10 @@ def forward():
 
     probs = torch.softmax(output, dim=1).tolist()[0]
 
-    print(probs)
+    label = np.argmax(np.array(probs))
 
-    return {"data": sentence}
+    ret = label_dict[label]
+    return {"data": ret}
 
 
 if __name__ == "__main__":
