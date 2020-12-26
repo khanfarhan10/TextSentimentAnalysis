@@ -3,6 +3,7 @@ from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassific
 import torch
 import numpy as np
 
+
 app = Flask(__name__)
 
 tokenizer = DistilBertTokenizerFast.from_pretrained("distilbert-base-cased");
@@ -21,7 +22,7 @@ label_dict = {
 def forward():
     params = request.get_json()
     sentence = params["sentence"]
-    print(sentence)
+
 
     tokens = tokenizer(sentence, return_tensors="pt")
 
@@ -32,6 +33,7 @@ def forward():
     label = np.argmax(np.array(probs))
 
     ret = label_dict[label]
+
     return {"data": ret}
 
 
