@@ -1,8 +1,14 @@
+from typing import Optional
 
 import streamlit as st
 import requests
 import json
+import spacy_streamlit
+from spacy_streamlit.util import get_svg
+from spacy import displacy
 
+
+spacy_model = "en_core_web_sm"
 
 def main():
     # Applying styles to the buttons
@@ -13,24 +19,89 @@ def main():
 
     # Heading
     st.header("Text Sentiment Analysis")
+    st.sidebar.title("TxT")
+    task = st.sidebar.selectbox("Choose Task: ", ("Sentiment Analysis", "Summarization", "Paraphrase"))
+
+    uploaded_file = st.sidebar.file_uploader("Upload your file:")
 
     # Text area for user input
-    user_input = st.text_area("Enter your text here", "")
-
-    if st.button("Analyze"):
-        with st.spinner('Analyze Text'):
-            output = forward(user_input)
-            st.write(output)
-            print(output)
+    user_input = st.text_area("Enter your text here", "", height=200)
 
 
-def forward(sentence):
+
+    if(task == "Sentiment Analysis"):
+
+        if(st.button("Analyze")):
+            with st.spinner('Analyze Text'):
+                doc = spacy_streamlit.process_text(spacy_model, user_input)
+
+                visual_pos(doc)
+                output = forward_sentimentAnalysis(user_input)
+                print(output)
+
+        pass
+    elif(task == "Summarization"):
+
+        if(st.button("Summarize")):
+            with st.spinner('Summarizing Text'):
+                doc = spacy_streamlit.process_text(spacy_model, user_input)
+                output = forward_summarization(user_input)
+
+
+    elif(task == "Paraphrase"):
+
+        if(st.button("Paraphrase")):
+            with st.spinner('Paraphrasing Text'):
+                doc = spacy_streamlit.process_text(spacy_model, user_input)
+                output = forward_paraphrase(user_input)
+
+
+
+
+
+
+
+
+
+def forward_sentimentAnalysis(sentence):
     # Making the request to the backend
     headers = {"content-type": "application/json"}
     r = requests.post("http://127.0.0.1:5000/run_forward", headers=headers,
                       data=json.dumps({'sentence': sentence}))
     data = r.json()
     return data["data"]
+
+
+def forward_summarization(sentence):
+    # Making the request to the backend
+    headers = {"content-type": "application/json"}
+    r = requests.post("http://127.0.0.1:5000/run_forward", headers=headers,
+                      data=json.dumps({'sentence': sentence}))
+    data = r.json()
+    return data["data"]
+
+
+def forward_paraphrase(sentence):
+    # Making the request to the backend
+    headers = {"content-type": "application/json"}
+    r = requests.post("http://127.0.0.1:5000/run_forward", headers=headers,
+                      data=json.dumps({'sentence': sentence}))
+    data = r.json()
+    return data["data"]
+
+
+def visual_pos(doc, title: Optional[str] = "Dependency Parse & Part-of-speech tags"):
+    if title:
+        st.header(title)
+
+    docs = [span.as_doc() for span in doc.sents]
+    for sent in docs:
+        html = displacy.render(sent, style="dep")
+        # Double newlines seem to mess with the rendering
+        html = html.replace("\n\n", "\n")
+        # if split_sents and len(docs) > 1:
+        #     st.markdown(f"> {sent.text}")
+        st.write(get_svg(html), unsafe_allow_html=True)
 
 
 if __name__ == "__main__":
