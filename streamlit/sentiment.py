@@ -1,5 +1,4 @@
 from typing import Optional
-
 import streamlit as st
 import requests
 import json
@@ -22,7 +21,6 @@ def main():
     st.sidebar.title("TxT")
     task = st.sidebar.selectbox("Choose Task: ", ("Sentiment Analysis", "Summarization", "Paraphrase"))
 
-    uploaded_file = st.sidebar.file_uploader("Upload your file:")
 
     # Text area for user input
     user_input = st.text_area("Enter your text here", "", height=200)
@@ -37,7 +35,9 @@ def main():
 
                 visual_pos(doc)
                 output = forward_sentimentAnalysis(user_input)
-                print(output)
+
+                st.header("Sentiment")
+                st.write(output)
 
         pass
     elif(task == "Summarization"):
@@ -97,10 +97,7 @@ def visual_pos(doc, title: Optional[str] = "Dependency Parse & Part-of-speech ta
     docs = [span.as_doc() for span in doc.sents]
     for sent in docs:
         html = displacy.render(sent, style="dep")
-        # Double newlines seem to mess with the rendering
         html = html.replace("\n\n", "\n")
-        # if split_sents and len(docs) > 1:
-        #     st.markdown(f"> {sent.text}")
         st.write(get_svg(html), unsafe_allow_html=True)
 
 
