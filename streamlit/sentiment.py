@@ -56,13 +56,6 @@ def main():
                 output = forward_paraphrase(user_input)
 
 
-
-
-
-
-
-
-
 def forward_sentimentAnalysis(sentence):
     # Making the request to the backend
     headers = {"content-type": "application/json"}
