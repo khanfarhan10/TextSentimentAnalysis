@@ -36,7 +36,7 @@ def main():
                 visual_pos(doc)
                 output = forward_sentimentAnalysis(user_input)
 
-                st.header("Sentiment")
+                st.header("Sentiment Analysis")
                 st.write(output)
 
         pass
