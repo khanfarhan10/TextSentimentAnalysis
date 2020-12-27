@@ -2,7 +2,7 @@ from flask import Flask, request
 from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassification
 import torch
 import numpy as np
-
+import csv
 
 app = Flask(__name__)
 
@@ -10,11 +10,11 @@ tokenizer = DistilBertTokenizerFast.from_pretrained("distilbert-base-cased");
 model = DistilBertForSequenceClassification.from_pretrained("../models/amazon-distilbert")
 
 label_dict = {
-    0: "Sad Af",
+    0: "More Sad",
     1: "Sad",
     2: "Meh",
     3: "Happy",
-    4: "Happy af"
+    4: "More Happy"
 }
 
 
