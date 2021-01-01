@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<br>
+
+<div class="container">
+	<section class="jumbotron text-center">
+	<div class="row">
+		<div class="col-sm-6">
+		<h1 class="jumbotron-heading">Sentiment Analysis </h1>
+          <p class="lead text-black">
+            <h3><b>Dinesh Kumar</b></h3>
+            <p>
+          Machine Learning and Data Science enthusiast, Android Developer, programmer and always willing to learn and work across new technologies and domains.</p></p>
+          <p>
+            <a href="https://github.com/Dineshkumar536" class="btn btn-primary my-2">Follow me on GitHub</a>
+            <a href="https://www.linkedin.com/in/dinesh-kumar-573852152/" class="btn btn-secondary my-2">Linkedin</a>
+          </p>
+         
+		</div>
+
+		<div class="col-sm-6">
+			<div class="container">
+				<form method="POST" action="/sentiment">
+				<textarea name="message" class="form-control" cols="8" rows="8"></textarea>
+				<br>
+				<button class="btn btn-success" type="submit">Analysis</button>
+
+				<button style="margin-left: 10px;" class="btn btn-danger" type="reset">Reset</button>
+
+			</form>
+			<br>
+
+			<div class="container">
+				{% if prediction == 1 %}
+					<div class="container">
+						<p class="alert alert-success"><b>Positive Sentiment</b></p>
+					</div>
+				{% elif prediction == 0 %}
+					<div class="container">
+						<p class="alert alert-danger"><b>Negetive Sentiment</b></p>
+                    </div>
+                {% elif prediction == 2 %}
+			    	<div class="container">
+						<p class="alert alert-danger"><b>Neutral Sentiment</b></p>
+                    </div>
+				{% endif %}
+			</div>
+			<div class="container">
+				<h6>{{newstr}}</h6>
+				<h6>{{Polarity}}</h6>
+				<h6>{{Subjectivity}}</h6>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<p class="alert alert-success">
+							{{ original }}
+						</p>
+					</div>
+					<div class="col-sm-6">
+						<p class="alert alert-warning">
+							{{ sum_message }}
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+</div>	
+	<!-- form area -->
+	
+
+{% endblock %}
