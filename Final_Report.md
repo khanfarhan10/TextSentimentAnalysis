@@ -15,7 +15,7 @@
 * The data span a period of more than 10 years, including all **~500,000 reviews** up to October 2012.
 * It contains **huge** dataset due to this i have choosen this dataset for my project.
 * images
-![]("/images/dataset.JPG")
+![](/images/dataset.JPG)
 
 ## Data Preprocessing on dataset
 * Before we move to train our model we have to do preprocessing so that we can **remove unwanted data**.
@@ -31,7 +31,7 @@
 * Then i transform it on train reviews as **reviews_train_tfidf=tfidf_model.transform(reviews_train)**.
 * Then i used **WordCloud** to see **top 10 words** by importing Wordcloud in my model.
 * images 
-![]("/images/top10_words.jpg")
+![](/images/top10_words.jpg)
 
 ## Model Selection
 * Model selection is very **key point** to make your project best in term of accuracy and precission.
@@ -40,11 +40,11 @@
 * From these three i have figureout one algorithm which will fit to my model.
 * So on the basis of **parameters** and **accuracy** i choosed Naive Bayes for my model to train my model on it.
 * images
-![]("/images/f1_scores.jpg")
+![](/images/f1_scores.jpg)
 
 ## Model Deployement
 * For pre-check my model **frontend and backend** i deployed it on my local server, and it working efficiently and precisely.
 * I have added feature of **prediction of sentiment** , **keywords extraction and showing** , **Polarity and Subjectivity** and **Summary**. these are some features which will comes up when we put sone text in my frontend and gives output after processing in backend.
 * images of frontend
-![]("/images/frontend1.JPG")
-![]("/images/frontend2.JPG")
+![](/images/frontend1.JPG)
+![](/images/frontend2.JPG)
