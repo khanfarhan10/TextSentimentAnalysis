@@ -24,6 +24,8 @@ def main():
 
     if(option == "tsa"):
 
+        print("Running the model ...")
+
         for row in data:
             output = model.tsaForward(row)
             write_data(outputPath, row, output)

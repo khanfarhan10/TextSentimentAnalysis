@@ -11,7 +11,7 @@ def read_data(input_path):
     if ext != ".csv":
         raise Exception("The input file is not a csv file")
 
-    print("Reading the input file")
+    print("Reading the input file ... ")
     with open(input_path, "r") as csvfile:
         data = csv.reader(csvfile)
         for row in data:

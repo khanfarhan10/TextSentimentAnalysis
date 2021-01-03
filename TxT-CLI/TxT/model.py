@@ -1,17 +1,18 @@
-from transformers import DistilBertForSequenceClassification, DistilBertTokenizer
+from transformers import DistilBertForSequenceClassification, DistilBertTokenizerFast
 import torch
 import random
+import numpy as np
 
 class GlobalModel:
 
     def __init__(self):
-        self.tsaModel = DistilBertForSequenceClassification.from_pretrained("../../models/amazon-distilbert")
+        self.tsaModel = DistilBertForSequenceClassification.from_pretrained("/home/vamsi/Documents/GitHub/TextSentimentAnalysis/models/amazon-distilbert")
         self.tsaTokenizer = DistilBertTokenizerFast.from_pretrained("distilbert-base-cased")
 
     def tsaForward(self, sentence):
-        tokens = tokenizer(sentence, return_tensors="pt")
+        tokens = self.tsaTokenizer(sentence, return_tensors="pt")
 
-        output = model(tokens["input_ids"], tokens["attention_mask"]).logits
+        output = self.tsaModel(tokens["input_ids"], tokens["attention_mask"]).logits
 
         probs = torch.softmax(output, dim=1).tolist()[0]
 
