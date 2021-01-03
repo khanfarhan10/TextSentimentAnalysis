@@ -47,6 +47,9 @@ def main():
                 doc = spacy_streamlit.process_text(spacy_model, user_input)
                 output = forward_summarization(user_input)
 
+                st.header("Summarized Text")
+                st.write(output)
+
 
     elif(task == "Paraphrase"):
 
@@ -68,7 +71,7 @@ def forward_sentimentAnalysis(sentence):
 def forward_summarization(sentence):
     # Making the request to the backend
     headers = {"content-type": "application/json"}
-    r = requests.post("http://127.0.0.1:5000/run_forward", headers=headers,
+    r = requests.post("http://127.0.0.1:5000/run_forward_summarizer", headers=headers,
                       data=json.dumps({'sentence': sentence}))
     data = r.json()
     return data["data"]
