@@ -30,6 +30,7 @@ def main():
             output = model.tsaForward(row)
             write_data(outputPath, row, output)
 
+        print("Finished writing ...")
 
     elif(option == "sum"):
         pass
