@@ -126,3 +126,38 @@ You are now happy to go forth coding and running your app with :
 If you have further issues/queries regarding the project, feel free to contact us : 
 - Farhan Hai Khan : njrfarhandasilva10@gmail.com
 - Tannistha Pal : paltannistha@gmail.com
+
+# CLI Tool Usage
+
+Please follow the steps to use the CLI Tool for text sentiment analysis and for summarization.
+
+1. Clone the repo:
+```
+git clone https://github.com/khanfarhan10/TextSentimentAnalysis.git
+```
+
+2. Change directory into the application folder:
+```
+cd TextSentimentAnalysis/TxT-CLI
+```
+
+3. Install the CLI through pip:
+```
+pip3 install .
+```
+
+4. Usage of the CLI:
+
+```
+TxT <option> <inputfilepath> <outputfilepath>
+```
+
+5. Options
+```
+<option> = "tsa" (Text Sentiment Analysis)
+         = "sum" (Summarization)
+         
+<inputfilepath> = Path to a csv file containing texts in the first column
+
+<outputfilepath> = Path to an empty csv file
+```
