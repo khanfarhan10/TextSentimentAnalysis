@@ -13,3 +13,6 @@ streamlit==0.71.0
 # numerical computations & data manipulations
 numpy==1.19.4
 pandas==1.1.4
+
+# upload zipfile
+zipfile36 == 0.1.3
