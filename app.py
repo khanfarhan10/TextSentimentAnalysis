@@ -1,4 +1,4 @@
-def app():
+
     
     import streamlit.components.v1 as components
     
@@ -12,7 +12,7 @@ def app():
     from model import model
     import base64
     import warnings 
-    
+  def app():
     path=os.getcwd()
     
     st.set_option('deprecation.showfileUploaderEncoding', False)
