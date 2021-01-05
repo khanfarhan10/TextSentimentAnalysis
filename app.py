@@ -1,18 +1,18 @@
+
+    
+import streamlit.components.v1 as components
+    
+    
+import csv 
+import re
+import streamlit as st
+import zipfile
+import pandas as pd 
+import os
+from model import model
+import base64
+import warnings 
 def app():
-    
-    import streamlit.components.v1 as components
-    
-    
-    import csv 
-    import re
-    import streamlit as st
-    import zipfile
-    import pandas as pd 
-    import os
-    from model import model
-    import base64
-    import warnings 
-    
     path=os.getcwd()
     
     st.set_option('deprecation.showfileUploaderEncoding', False)
