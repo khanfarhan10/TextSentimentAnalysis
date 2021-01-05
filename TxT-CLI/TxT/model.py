@@ -2,6 +2,9 @@ from transformers import DistilBertForSequenceClassification, DistilBertTokenize
 import torch
 import random
 import numpy as np
+import spacy
+
+nlp = spacy.load("en_core_web_sm")
 
 class GlobalModel:
 
@@ -10,6 +13,7 @@ class GlobalModel:
         self.tsaTokenizer = DistilBertTokenizerFast.from_pretrained("distilbert-base-cased")
 
     def tsaForward(self, sentence):
+
         tokens = self.tsaTokenizer(sentence, return_tensors="pt")
 
         output = self.tsaModel(tokens["input_ids"], tokens["attention_mask"]).logits
@@ -28,6 +32,7 @@ class GlobalModel:
 
         all_words = [word.text for word in docx]
         Freq_word = {}
+
         for w in all_words:
             w1 = w.lower()
             if w1 not in extra_words and w1.isalpha():
@@ -36,6 +41,7 @@ class GlobalModel:
                 else:
                     Freq_word[w1] = 1
 
+
         val = sorted(Freq_word.values())
         max_freq = val[-3:]
 
@@ -43,6 +49,7 @@ class GlobalModel:
             Freq_word[word] = (Freq_word[word] / max_freq[-1])
 
         sent_strength = {}
+
         for sent in docx.sents:
             for word in sent:
 
@@ -56,22 +63,26 @@ class GlobalModel:
 
                 else:
                     continue
+
         top_sentences = (sorted(sent_strength.values())[::-1])
         top30percent_sentence = int(0.3 * len(top_sentences))
 
         top_sent = top_sentences[:top30percent_sentence]
 
         summary = []
+
         for sent, strength in sent_strength.items():
             if strength in top_sent:
                 summary.append(sent)
 
             else:
                 continue
+
         ans = ""
         for i in summary:
             ans += i.text + " "
-        pass
+
+        return ans
 
     def paraForward(self):
         pass
