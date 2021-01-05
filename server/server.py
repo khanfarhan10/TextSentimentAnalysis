@@ -5,14 +5,14 @@ import numpy as np
 import spacy
 from spacy.lang.en.stop_words import STOP_WORDS
 from string import punctuation
+from transformers import T5Tokenizer, T5ForConditionalGeneration
 
 app = Flask(__name__)
 
 extra_words=list(STOP_WORDS)+list(punctuation)+['\n']
 nlp=spacy.load('en_core_web_sm')
 
-tokenizer = DistilBertTokenizerFast.from_pretrained("distilbert-base-cased");
-model = DistilBertForSequenceClassification.from_pretrained("../models/amazon-distilbert")
+
 
 label_dict = {
     0: "More Sad",
@@ -27,7 +27,8 @@ label_dict = {
 def forward():
     params = request.get_json()
     sentence = params["sentence"]
-
+    tokenizer = DistilBertTokenizerFast.from_pretrained("distilbert-base-cased");
+    model = DistilBertForSequenceClassification.from_pretrained("../models/amazon-distilbert")
 
     tokens = tokenizer(sentence, return_tensors="pt")
 
@@ -41,6 +42,34 @@ def forward():
 
     return {"data": ret}
 
+
+@app.route("/run_forward_paraphrase", methods=["POST"])
+def run_forward_paraphrase():
+
+    tokenizer = T5Tokenizer.from_pretrained("t5-base")
+    model = T5ForConditionalGeneration.from_pretrained("Vamsi/T5_Paraphrase_Paws")
+
+    sentence = "This is something which i cannot understand at all"
+    text = "paraphrase: " + sentence
+    encoding = tokenizer(text, padding=True, return_tensors="pt")
+    input_ids, attention_masks = encoding["input_ids"], encoding["attention_mask"]
+
+    outputs = model.generate(
+        input_ids=input_ids, attention_mask=attention_masks,
+        max_length=256,
+        do_sample=True,
+        top_k=200,
+        top_p=0.95,
+        early_stopping=True,
+        num_return_sequences=5
+    )
+
+    ans = ""
+    for output in outputs:
+        line = tokenizer.decode(output, skip_special_tokens=True, clean_up_tokenization_spaces=True)
+        ans += line
+
+    return {"data": ans}
 
 @app.route("/run_forward_summarizer", methods=["POST"])
 def run_forward_summarizer():
