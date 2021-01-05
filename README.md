@@ -126,3 +126,25 @@ You are now happy to go forth coding and running your app with :
 If you have further issues/queries regarding the project, feel free to contact us : 
 - Farhan Hai Khan : njrfarhandasilva10@gmail.com
 - Tannistha Pal : paltannistha@gmail.com
+
+# Using the Streamlit App
+To start using the streamlit application follow these steps:
+
+1. Clone the repository:
+```
+git clone https://github.com/khanfarhan10/TextSentimentAnalysis.git
+```
+
+2. Start the streamlit app:
+```
+cd TextSentimentAnalysis/streamlit
+streamlit run sentiment.py
+```
+
+3. Start the flask server:
+```
+cd TextSentimentAnalysis/server
+python server.py
+```
+
+In the streamlit application, you can enter the text, and in the sidebar you can choose the task you want to perform, and hit the button for the corresponding inference.
