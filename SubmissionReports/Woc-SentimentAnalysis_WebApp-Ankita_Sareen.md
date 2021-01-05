@@ -52,6 +52,7 @@ Our classifier might misclassify things like 'not good', therefore I used groups
   
 * ### Deploy the model in flask 
 Model was further integrated with flask and then deployed on heroku with further implementation of features such as summarisation.
+
 *Pull Requests:*
   * **Model Improvised:** https://github.com/khanfarhan10/TextSentimentAnalysis/pull/18
 
