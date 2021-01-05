@@ -21,3 +21,4 @@ Procfile
 heroku_create.py
 
 .idea
+*bin

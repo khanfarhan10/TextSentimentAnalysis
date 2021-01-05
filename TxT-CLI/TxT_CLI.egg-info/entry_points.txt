@@ -1,0 +1,3 @@
+[console_scripts]
+TxT = TxT.__main__:main
+

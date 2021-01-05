@@ -1,0 +1,10 @@
+setup.py
+TxT/__init__.py
+TxT/__main__.py
+TxT/file_parser.py
+TxT/model.py
+TxT_CLI.egg-info/PKG-INFO
+TxT_CLI.egg-info/SOURCES.txt
+TxT_CLI.egg-info/dependency_links.txt
+TxT_CLI.egg-info/entry_points.txt
+TxT_CLI.egg-info/top_level.txt
