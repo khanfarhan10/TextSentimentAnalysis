@@ -33,8 +33,14 @@ def main():
         print("Finished writing ...")
 
     elif(option == "sum"):
-        pass
 
+        print("Running the model ...")
+
+        for row in data:
+            output = model.sumForward(row)
+            write_data(outputPath, row, output)
+
+        print("Finished summary ...")
 
     elif(option == "para"):
         pass
