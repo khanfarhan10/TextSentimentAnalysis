@@ -47,20 +47,33 @@
   
   Training Script: https://colab.research.google.com/drive/1ejVSWQng9chJRoqWprfxTnZnsKAcRFT-?usp=sharing
 
-
-## Objectives in Progress
-
 * ### Key Word Extraction
 
-  Currently, trying to understand the spacy library to use it efficiently for keyword extraction.
+  Dependency parsing and pos tagging using the spacy library has been implemented and integrated into streamlit.
 
+  *Pull Requests:*
+  * **Inference api #27:** https://github.com/khanfarhan10/TextSentimentAnalysis/pull/27
 
-## Other Objectives
-* ### Deployment to Android
-
-  Flutter UI to me made matching the aesthetics of the web UI and also having the same functionality.
 
 * ### Models for paraphrasing and summarization
 
-  Idea is to leverage T5 transformer model for both these tasks as it can perform all the NLP tasks with the right way of training as presented in the T5 paper.
+  Leveraged T5 for performing paraphrasing and used extractive summarization technique for summarization task. The summarization task, selectes sentences in a paragraph and calculates sentence scores based on the token score of each word in the sentence and picks the top 20 percent of the sentence with high score.
+
+  *Pull Requests:*
+  * **Model Utility #32:** https://github.com/khanfarhan10/TextSentimentAnalysis/pull/32
+
+* ### Built a CLI Tool for processing csv files
+
+  Made use of the same model inferences, and created a CLI application in python which can process huge csv files, and output csv files with annotated labels. This can be useful for dataset generation and processing huge chunks of data.
+
+  *Pull Requests:*
+  * **Cli #30:** https://github.com/khanfarhan10/TextSentimentAnalysis/pull/30
+  * **Small changes to the CLI #31:** https://github.com/khanfarhan10/TextSentimentAnalysis/pull/31
+  
+
+## Objectives in Progress
+
+* ### Deployment to Android
+  Flutter UI to me made matching the aesthetics of the web UI and also having the same functionality.
+
 
