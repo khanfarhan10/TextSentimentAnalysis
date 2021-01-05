@@ -19,3 +19,5 @@ TextSentimentEnv
 setup.sh
 Procfile
 heroku_create.py
+
+.idea
