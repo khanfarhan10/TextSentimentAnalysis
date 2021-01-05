@@ -149,7 +149,7 @@ streamlit run sentiment.py
 cd TextSentimentAnalysis/server
 python server.py
 ```
-
+### Usage of Paraphrase and Summarization Utilities
 In the streamlit application, you can enter the text, and in the sidebar you can choose the task you want to perform, and hit the button for the corresponding inference.
 
 
@@ -188,3 +188,4 @@ TxT <option> <inputfilepath> <outputfilepath>
 
 <outputfilepath> = Path to an empty csv file
 ```
+
