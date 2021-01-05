@@ -127,10 +127,13 @@ If you have further issues/queries regarding the project, feel free to contact u
 - Farhan Hai Khan : njrfarhandasilva10@gmail.com
 - Tannistha Pal : paltannistha@gmail.com
 
+
 # Using the Streamlit App
 To start using the streamlit application follow these steps:
 
-1. Clone the repository:
+
+1. Clone the repo:
+
 ```
 git clone https://github.com/khanfarhan10/TextSentimentAnalysis.git
 ```
@@ -148,3 +151,40 @@ python server.py
 ```
 
 In the streamlit application, you can enter the text, and in the sidebar you can choose the task you want to perform, and hit the button for the corresponding inference.
+
+
+# CLI Tool Usage
+
+Please follow the steps to use the CLI Tool for text sentiment analysis and for summarization.
+
+1. Clone the repo:
+
+```
+git clone https://github.com/khanfarhan10/TextSentimentAnalysis.git
+```
+
+2. Change directory into the application folder:
+```
+cd TextSentimentAnalysis/TxT-CLI
+```
+
+3. Install the CLI through pip:
+```
+pip3 install .
+```
+
+4. Usage of the CLI:
+
+```
+TxT <option> <inputfilepath> <outputfilepath>
+```
+
+5. Options
+```
+<option> = "tsa" (Text Sentiment Analysis)
+         = "sum" (Summarization)
+         
+<inputfilepath> = Path to a csv file containing texts in the first column
+
+<outputfilepath> = Path to an empty csv file
+```
