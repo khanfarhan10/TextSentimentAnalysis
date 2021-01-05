@@ -22,7 +22,7 @@ Text Sentiment Analysis in Python using Natural Language Processing (NLP) for Ne
 **Winter of Code 2020 :** [View Project Ideas](https://github.com/dsc-iem/WoC-Project-Ideas#text-sentiment-analysis) or [View Issues to Solve](https://github.com/khanfarhan10/TextSentimentAnalysis/issues).
 
 ## Web Application Demo
-[View the deployed WebApp on Heroku](https://some-app.herokuapp.com/).
+[View the deployed WebApp on Heroku](http://sentimentproject.herokuapp.com/nlpsentiment).
 
 ## Installation : Setting up the Application Locally
 * Dependencies:
